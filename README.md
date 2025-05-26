@@ -46,33 +46,34 @@ FROM country_data;
 
 ------------------------------------------------------------------------------------------------------
 
-## 🔄 SQL JOIN Assignment
+## 🔄 SQL JOIN Assignment – INNER, LEFT, RIGHT, FULL OUTER
 
-This assignment showcases the use of different types of SQL JOINs (`INNER`, `LEFT`, `RIGHT`, `FULL OUTER`) on two related tables: `EmployeeDetail` and `ProjectDetail`.
+This assignment demonstrates the use of **SQL JOINs** – specifically `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, and `FULL OUTER JOIN` – using two tables: `EmployeeDetail` and `ProjectDetail`.
 
 📄 **Uploaded File:**  
 [`SQL_Assignment_Joins.pdf`](./SQL_Assignment_Joins.pdf)
 
-### 📋 Tables Used
+---------------------------------------------------------------------------------------------------------
 
-**EmployeeDetail**  
-Contains employee information such as `EmployeeID`, `FirstName`, `LastName`, `Department`, and `Gender`.
+### 📋 Tables Involved
 
-**ProjectDetail**  
-Contains project details linked by `EmployeeDetailID`, including `ProjectDetailID` and `ProjectName`.
+- **EmployeeDetail**
+  - Columns: `EmployeeID`, `FirstName`, `LastName`, `Salary`, `Department`, `Gender`
+- **ProjectDetail**
+  - Columns: `ProjectDetailID`, `EmployeeDetailID`, `ProjectName`
 
----
+---------------------------------------------------------------------------------------------------------
 
-### 📌 Assignment Questions Covered:
+### 📌 Assignment Questions:
 
-1. Get Employee Name and Project Name for employees **who are assigned to projects**, ordered by First Name – *(INNER JOIN)*  
-2. Get Employee Name and Project Name for **all employees**, even if they **don't have a project** – *(LEFT JOIN)*  
-3. Get **all project names**, even if **no matching employee** exists – *(RIGHT JOIN)*  
-4. Get **all employee and project records**, even if **no match is found** – *(FULL OUTER JOIN)*
+1. **INNER JOIN** – Get Employee Name and Project Name for employees who are assigned to projects.  
+2. **LEFT JOIN** – Get all employees with their project names, even if no project is assigned.  
+3. **RIGHT JOIN** – Get all project names, even if no matching employee exists.  
+4. **FULL OUTER JOIN** – Get complete records of employees and projects, including unmatched ones.
 
------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
 
-### 🔍 Example SQL Query – Full Outer Join
+### 🔍 Sample Query (FULL OUTER JOIN):
 
 ```sql
 SELECT 
