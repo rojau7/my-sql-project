@@ -88,6 +88,48 @@ ON
 ORDER BY 
   Empdetails.FirstName;
 
+-----------------------------------------------------------------------------------------------------------------
+
+📘 SQL Assignment – Employee Tables
+This repository contains an SQL assignment involving queries on two tables:
+
+EmployeeDetails
+
+EmployeeSalary
+
+📄 Description
+The assignment consists of 10 SQL questions that test knowledge of:
+
+SELECT statements
+
+WHERE clause
+
+Aggregate functions (MIN, MAX, AVG)
+
+DISTINCT
+
+BETWEEN
+
+UNION
+
+🗃️ Files Included
+SQL_Assignment.pdf: Contains all 10 assignment questions with answers.
+
+EmpTable.csv: Sample data for the EmployeeDetails table.
+
+SalaryTable.csv: Sample data for the EmployeeSalary table.
+
+✅ Sample Questions Covered
+Fetch employees under a specific manager.
+
+Get distinct projects.
+
+Count employees in a project.
+
+Salary range filters.
+
+Use of aggregate functions and conditional clauses.
+
 ## 🛠 Tools Used
 
 - **SQL Server / Azure Data Studio**
