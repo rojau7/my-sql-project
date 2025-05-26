@@ -44,15 +44,55 @@ SELECT *,
   RIGHT(dataC, LEN(dataC) - CHARINDEX('.', dataC, CHARINDEX('.', dataC, CHARINDEX('.', dataC) + 1) + 1)) AS FourthDot  
 FROM country_data;
 
+------------------------------------------------------------------------------------------------------
+
+## 🔄 SQL JOIN Assignment
+
+This assignment showcases the use of different types of SQL JOINs (`INNER`, `LEFT`, `RIGHT`, `FULL OUTER`) on two related tables: `EmployeeDetail` and `ProjectDetail`.
+
+📄 **Uploaded File:**  
+[`SQL_Assignment_Joins.pdf`](./SQL_Assignment_Joins.pdf)
+
+### 📋 Tables Used
+
+**EmployeeDetail**  
+Contains employee information such as `EmployeeID`, `FirstName`, `LastName`, `Department`, and `Gender`.
+
+**ProjectDetail**  
+Contains project details linked by `EmployeeDetailID`, including `ProjectDetailID` and `ProjectName`.
+
 ---
+
+### 📌 Assignment Questions Covered:
+
+1. Get Employee Name and Project Name for employees **who are assigned to projects**, ordered by First Name – *(INNER JOIN)*  
+2. Get Employee Name and Project Name for **all employees**, even if they **don't have a project** – *(LEFT JOIN)*  
+3. Get **all project names**, even if **no matching employee** exists – *(RIGHT JOIN)*  
+4. Get **all employee and project records**, even if **no match is found** – *(FULL OUTER JOIN)*
+
+-----------------------------------------------------------------------------------------------------------------
+
+### 🔍 Example SQL Query – Full Outer Join
+
+```sql
+SELECT 
+  Empdetails.FirstName + ' ' + Empdetails.LastName AS EmployeeName,
+  Projdetails.ProjectName
+FROM 
+  Empdetails
+FULL OUTER JOIN 
+  Projdetails
+ON 
+  Empdetails.EmployeeID = Projdetails.EmployeeDetailID
+ORDER BY 
+  Empdetails.FirstName;
 
 ## 🛠 Tools Used
 
 - **SQL Server / Azure Data Studio**
 - **Git & GitHub**
 
----
-
+-----------------------------------------------------------------------------------------------------------------
 If you'd like to get in touch, you can reach me at: [roja.au1994@gmail.com](mailto:roja.au1994@gmail.com)
 
 
